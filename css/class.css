@@ -1,0 +1,763 @@
+@charset "UTF-8";
+
+@font-face {
+    font-family: 'Paperlogy';
+    src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/2408-3@1.0/Paperlogy-4Regular.woff2') format('woff2');
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Paperlogy';
+    src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/2408-3@1.0/Paperlogy-5Medium.woff2') format('woff2');
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Paperlogy';
+    src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/2408-3@1.0/Paperlogy-6SemiBold.woff2') format('woff2');
+    font-weight: 600;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Paperlogy';
+    src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/2408-3@1.0/Paperlogy-7Bold.woff2') format('woff2');
+    font-weight: 700;
+    font-style: normal;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body::-webkit-scrollbar {
+    /*스크롤바 전체*/
+    width: 15px;
+}
+
+body::-webkit-scrollbar-thumb {
+    /*스크롤바 막대*/
+    background-color: #a1b2db;
+    border-radius: 10px;
+    background-clip: padding-box;
+    border: 2px solid transparent;
+}
+
+body::-webkit-scrollbar-track {
+    /*스크롤바 막대 외부*/
+    background-color: rgb(211, 211, 211);
+    border-radius: 10px;
+    box-shadow: inset 0px 0px 5px white;
+}
+
+body {
+    font-family: 'Paperlogy';
+    font-size: 18px;
+    line-height: 1.2;
+    color: #333;
+    min-width: 1320px;
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: #222;
+}
+
+/* 헤더 */
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgb(255, 255, 255);
+    z-index: 100;
+    padding: 20px 0;
+}
+
+.header_in {
+    max-width: 1320px;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    font-weight: 700;
+    font-size: 20px;
+    align-items: center;
+}
+
+.header_in ul {
+    display: flex;
+}
+
+.nav {
+    width: 70%;
+    font-size: 20px;
+}
+
+.nav li {
+    flex: 1;
+    text-align: center;
+}
+
+.nav li a {
+    display: inline-block;
+    position: relative;
+    padding: 10px 10px;
+}
+
+.nav a::before {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 100%;
+    background-color: #3D69D2;
+    position: absolute;
+    left: 0;
+    top: 0;
+    transform: scaleX(0);
+    transition: 0.5s;
+    z-index: -1;
+}
+
+.nav a:hover {
+    color: #fff;
+}
+
+.nav a:hover::before {
+    transform: scaleX(1);
+}
+
+.login {
+    width: 8%;
+    justify-content: space-between;
+    font-weight: 600;
+    font-size: 15px;
+    text-align: right;
+}
+
+.login li:hover {
+    text-decoration: underline;
+}
+
+.logo img {
+    width: 100px;
+    display: block;
+}
+
+/* /헤더 */
+
+/* main video */
+.mainvideo {
+    margin-top: 84px;
+    position: relative;
+}
+
+.mainvideo video {
+    display: block;
+    width: 100%;
+}
+
+.mainvideo p {
+    font-weight: 400;
+    font-size: 30px;
+    color: #fff;
+    position: absolute;
+    bottom: 150px;
+    left: 300px;
+}
+
+.mainvideo h1 {
+    font-weight: 700;
+    font-size: 66px;
+    color: #fff;
+    position: absolute;
+    bottom: 200px;
+    left: 300px;
+}
+
+/* gnb */
+.gnb {
+    background-color: #F3F3F3;
+
+    padding: 45px 0;
+}
+
+.gnb_in ul {
+    display: flex;
+    margin: auto;
+    width: 1320px;
+    justify-content: space-between;
+}
+
+.gnb_in h3 {
+    width: 230px;
+    text-align: center;
+    font-weight: 500;
+    font-size: 20px;
+}
+
+.gnb_in li {
+    padding: 8px 0;
+    border: 1px solid #99999958;
+    border-radius: 6px;
+    background-color: #fff;
+}
+
+.gnb_in li:hover {
+    background-color: #3D69D2;
+
+    box-shadow: 2px 2px 3px 0 rgba(255, 255, 255, .5),
+        -2px -2px 2px 0 rgba(116, 125, 136, .5),
+        inset -2px -2px 3px 0 rgba(255, 255, 255, .2),
+        inset 2px 2px 3px 0 rgba(43, 43, 43, 0.4);
+}
+
+.gnb_in li:hover h3 {
+    color: #fff;
+}
+
+/* 슬라이드 */
+.drawingbox {
+    overflow: hidden;
+    padding: 80px 0 150px;
+}
+
+.drawingbox_in {
+    width: 1320px;
+    height: 380px;
+    margin: auto;
+    position: relative;
+    display: flex;
+
+}
+
+.drawingbox_in h2 {
+    font-weight: 500;
+    font-size: 25px;
+}
+
+.drawingbox_in h3 {
+    font-weight: 500;
+    font-size: 20px;
+    width: 340px;
+}
+
+.drawingbox_in h1 {
+    padding: 10px 0 25px;
+    font-weight: 700;
+    font-size: 50px;
+}
+
+.drawing {
+    position: absolute;
+    right: -300px;
+    z-index: -999;
+    overflow: hidden;
+}
+
+.drawtext {
+    margin-top: 135px;
+    margin-right: 20px;
+}
+
+.flower1 {
+    width: 120px;
+    position: absolute;
+    left: -90px;
+    top: 10px;
+    animation: flower1 linear infinite 10s;
+}
+
+@keyframes flower1 {
+    0% {
+        transform: rotate(0);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+/* 갤러리 꾸미기 */
+.drawinggallery {
+    width: 100%;
+    margin: 77px 30px;
+    box-sizing: border-box;
+}
+
+.drawinggallery_inner {
+    overflow: hidden;
+}
+
+.drawinggallery .swiper-slide a {
+    width: 100%;
+    height: 100%;
+}
+
+.drawinggallery .swiper-slide img {
+    display: block;
+}
+
+.drawinggallery .swiper-slide p {
+    font-weight: 600;
+    font-size: 18px;
+    width: 300px;
+    position: absolute;
+    bottom: 75px;
+    left: 30px;
+}
+
+.drawinggallery .swiper-slide span {
+    font-weight: 400;
+    font-size: 15px;
+    position: absolute;
+    bottom: 50px;
+    left: 30px;
+}
+
+/* 이동버튼 이미지로 바꾸기 */
+/* .swiper-button-prev,
+.swiper-button-next {
+    width: 50px;
+    height: 50px;
+}
+
+.swiper-button-prev:after,
+.swiper-button-next:after {
+    content: '';
+    display: block;
+    width: 50px;
+    height: 50px;
+}
+
+.swiper-button-prev,
+.swiper-button-prev:after {
+    position: absolute;
+    left: 0px;
+    top: 180px;
+}
+
+.swiper-button-next,
+.swiper-button-next:after {
+    position: absolute;
+    left: 30px;
+    top: 180px;
+} */
+
+
+/* .swiper-button-prev:after {
+    background: url(../images/class/swiperbutton_L.png) no-repeat;
+    width: 50px;
+    height: 50px;
+}
+
+.swiper-button-next:after {
+    background: url(../images/class/swiperbutton_R.png) no-repeat;
+}
+
+.swiper-button-prev:hover {
+    background: url(../images/class/swiperbutton_L_hover.png);
+    position: absolute;
+    left: 0px;
+    top: 360px;
+}
+
+.swiper-button-next:hover {
+    background: url(../images/class/swiperbutton_R_hover.png);
+    position: absolute;
+    left: 60px;
+    top: 360px;
+} */
+
+
+/* 이동버튼 영역 색상 바꾸기 */
+.drawinggallery .swiper-button-prev,
+.drawinggallery .swiper-button-next {
+    color: rgb(10, 90, 210);
+    border: 2px solid #3D69D2;
+    border-radius: 50px;
+    background-color: #fff;
+    width: 60px;
+    height: 60px;
+    padding: 5px;
+    transform: scale(0.8);
+}
+
+.drawinggallery .swiper-button-prev,
+.drawinggallery .swiper-button-prev:hover {
+    position: absolute;
+    left: -10px;
+    top: 340px;
+}
+
+.drawinggallery .swiper-button-next,
+.drawinggallery .swiper-button-next:hover {
+    position: absolute;
+    left: 70px;
+    top: 340px;
+}
+
+/* 이동버튼 영역 호버 시 색상 바꾸기 */
+.drawinggallery .swiper-button-prev:hover,
+.drawinggallery .swiper-button-next:hover {
+    color: #fff;
+    border: 2px solid #ffffff;
+    border-radius: 50px;
+    background-color: #3D69D2;
+    width: 60px;
+    height: 60px;
+}
+
+/* 블릿버튼 크기, 색상, 투명도 */
+.drawinggallery .swiper-pagination-bullet {
+    background: #5e8ff9;
+    width: 8px;
+    height: 8px;
+    opacity: 0.4;
+}
+
+/* 블릿버튼 페이지 표시날 때 투명도 */
+.drawinggallery .swiper-pagination-bullet-active {
+    opacity: 1;
+}
+
+/* 블릿버튼 위치 */
+.drawinggallery .swiper-horizontal>.swiper-pagination-bullets,
+.drawinggallery .swiper-pagination-bullets.swiper-pagination-horizontal {
+    bottom: -50px;
+    left: -595px;
+}
+
+/* recap video */
+.recap {
+    margin-top: 180px;
+}
+
+.recap video {
+    width: 100%;
+    margin-bottom: 180px;
+}
+
+.recap h1 {
+    text-align: center;
+    font-size: 50px;
+    font-weight: 700;
+    margin-bottom: 50px;
+}
+
+/* top */
+.top {
+    position: relative;
+    overflow: hidden;
+}
+
+.top p {
+    font-size: 20px;
+    font-weight: 700;
+    padding: 15px 0 5px;
+}
+
+.top span {
+    font-size: 15px;
+    font-weight: 400;
+}
+
+.top_in {
+    width: 1320px;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+}
+
+.top_in div {
+    position: relative;
+}
+
+.top h1 {
+    text-align: center;
+    font-size: 50px;
+    font-weight: 700;
+}
+
+.top1,
+.top3,
+.top5 {
+    margin-top: 130px;
+}
+
+.top2,
+.top4 {
+    margin-top: 90px;
+}
+
+.stamp1 {
+    position: absolute;
+    right: -23px;
+    bottom: 0px;
+    animation: stamp linear infinite 2s;
+}
+
+.stamp2 {
+    position: absolute;
+    right: -23px;
+    bottom: 40px;
+    animation: stamp linear infinite 2s;
+}
+
+.stamp3 {
+    position: absolute;
+    right: -23px;
+    bottom: 0px;
+    animation: stamp linear infinite 2s;
+}
+
+.stamp4 {
+    position: absolute;
+    right: -23px;
+    bottom: 40px;
+    animation: stamp linear infinite 2s;
+}
+
+.stamp5 {
+    position: absolute;
+    right: -23px;
+    bottom: 0px;
+    animation: stamp linear infinite 2s;
+}
+
+@keyframes stamp {
+    0% {
+        transform: translateY(10px);
+    }
+
+    50% {
+        transform: translateY(0);
+    }
+
+    100% {
+        transform: translateY(10px);
+    }
+}
+
+/* banner */
+.bluebanner {
+    margin-top: 180px;
+    background: linear-gradient(to bottom, #3D69D2 80%, transparent 80%);
+    width: 100%;
+    height: 550px;
+    /* position: relative; */
+    overflow: hidden;
+}
+
+.banner {
+    text-align: center;
+    width: 1320px;
+    margin: auto;
+    position: relative;
+}
+
+.banner_left {
+    position: absolute;
+    right: 655px;
+    top: 0;
+}
+
+.banner_right {
+    position: absolute;
+    right: -300px;
+    bottom: -210px;
+    animation: right linear infinite 2s;
+}
+
+
+@keyframes right {
+    0% {
+        transform: rotate(5deg);
+    }
+
+    50% {
+        transform: rotate(-5deg);
+    }
+
+    100% {
+        transform: rotate(5deg);
+    }
+}
+
+
+.bluebanner h1 {
+    font-size: 50px;
+    font-weight: 700;
+    color: #fff;
+    margin-bottom: 25px;
+    padding-top: 110px;
+}
+
+.bluebanner p {
+    font-size: 23px;
+    font-weight: 400;
+    color: #fff;
+}
+
+/* QnA */
+.qna {
+    text-align: center;
+    width: 1094px;
+    margin: 100px auto 180px;
+}
+
+.qna h1 {
+    font-size: 30px;
+    font-weight: 700;
+}
+
+.replybox {
+    margin: auto;
+    position: relative;
+    margin-bottom: 10px;
+}
+
+#btn {
+    position: absolute;
+    left: 945px;
+    top: 20px;
+}
+
+.reply {
+    border: 3px solid #333;
+    border-radius: 50px;
+    color: rgb(12, 12, 12);
+    font-size: 20px;
+    font-family: 'Paperlogy';
+    font-weight: 200;
+    padding: 15px 580px 15px 30px;
+}
+
+.qna p {
+    font-size: 15px;
+    font-weight: 500;
+    margin: 15px 0 65px;
+}
+
+.qna span {
+    font-weight: 400;
+    font-size: 14px;
+    color: #999;
+    margin-left: -280px;
+}
+
+.qnare {
+    display: flex;
+    margin: 45px 0 20px;
+    gap: 10px;
+}
+
+.qnare h2 {
+    font-weight: 700;
+    font-size: 20px;
+}
+
+.qnare h3 {
+    font-weight: 400;
+    font-size: 20px;
+}
+
+.qna ul li {
+    display: flex;
+    align-items: center;
+    border-top: 1px solid #777;
+    padding: 30px 0;
+}
+
+.re h4 {
+    font-weight: 700;
+    font-size: 18px;
+    margin: 0 150px 0 20px;
+}
+
+.re h5 {
+    font-weight: 400;
+    font-size: 22px;
+    width: 649px;
+    text-align: left;
+}
+
+.re h6 {
+    font-weight: 700;
+    font-size: 15px;
+    color: #acacac;
+}
+
+/* footer */
+.footer {
+    width: 100%;
+    background-color: #333;
+}
+
+.footer_in {
+    width: 1320px;
+    margin: auto;
+    padding-top: 65px;
+    padding-bottom: 65px;
+}
+
+.biglogo {
+    display: block;
+    margin-bottom: 20px;
+}
+
+.footer ul li,
+.footer ul li a {
+    color: #fff;
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 1.8;
+}
+
+.footer .fontsize {
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.footertext {
+    display: flex;
+    justify-content: space-between;
+}
+
+.footertext .flex {
+    display: flex;
+    justify-content: space-between;
+}
+
+.footertext a img:hover {
+    filter: opacity(0.5);
+
+}
+
+.footertext ul li a:hover {
+    text-decoration: underline;
+}
+
+/* TOP BTN */
+.topbtn {
+    position: fixed;
+    bottom: 50px;
+    right: 50px;
+    display: none;
+    z-index: 1000;
+}
+
+.topbtn:hover {
+    filter: brightness(1.3);
+}
+
+/* 스크롤 부드럽게 */
+html {
+    scroll-behavior: smooth;
+}
