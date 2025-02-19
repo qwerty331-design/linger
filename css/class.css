@@ -202,24 +202,22 @@ header {
     font-size: 20px;
 }
 
-.gnb_in li {
+.gnb_in li a {
+    display: block;
     padding: 8px 0;
     border: 1px solid #99999958;
     border-radius: 6px;
     background-color: #fff;
 }
 
-.gnb_in li:hover {
+.gnb_in li a:hover,
+.gnb_in .onblue {
     background-color: #3D69D2;
-
+    color: #fff;
     box-shadow: 2px 2px 3px 0 rgba(255, 255, 255, .5),
         -2px -2px 2px 0 rgba(116, 125, 136, .5),
         inset -2px -2px 3px 0 rgba(255, 255, 255, .2),
         inset 2px 2px 3px 0 rgba(43, 43, 43, 0.4);
-}
-
-.gnb_in li:hover h3 {
-    color: #fff;
 }
 
 /* 슬라이드 */
@@ -436,7 +434,9 @@ header {
 
 /* recap video */
 .recap {
-    margin-top: 180px;
+    
+    margin: 180px auto 0;
+    width: 50%;
 }
 
 .recap video {
